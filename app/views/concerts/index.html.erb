@@ -1,0 +1,41 @@
+
+
+	<div class="container-fluid">
+  			<div class="row">
+
+    			<div class="col-sm-7 listing">
+					<h1>Check out MusicCentral Concerts Happening Today</h1>
+						<ul>
+						<% @concerts.each do |concert| %>
+						<li><strong>Artist</strong>: <%= concert.artist %>
+						<strong>Venue</strong>: <%= concert.venue %>
+						<strong>City</strong>: <%= concert.city %>
+						<strong>Date</strong>: <%= concert.date %>
+						<strong>Price</strong>: <%= concert.price %>
+						<strong>Description</strong>: <%= concert.description %>
+						<%= link_to "Concert Details", concert_path(concert) %>
+						</li>
+						<% end %>
+					</ul>
+				</div>
+
+
+				<div class="col-sm-4 upcoming">
+					<div><h1>Future MusicCentral Concerts</h1>
+						<ul class="Future-list">
+							<% @futureconcerts.each do |futureconcert| %>
+						<li><strong>Artist</strong>: <%= futureconcert.artist %>
+						<strong>Venue</strong>: <%= futureconcert.venue %>
+						<strong>City</strong>: <%= futureconcert.city %>
+						<strong>Date</strong>: <%= futureconcert.date %>
+						<strong>Price</strong>: <%= futureconcert.price %>
+						<strong>Description</strong>: <%= futureconcert.description %>
+						<%= link_to "Concert Details", concert_path(futureconcert) %>
+						</li>
+						<% end %>
+						</ul>
+					</div>
+				</div>
+		</div>
+	</div>
+

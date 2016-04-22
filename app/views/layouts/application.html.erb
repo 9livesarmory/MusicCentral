@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MusicCentral</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container-fluid">
+		<div class="row top">
+			<div class="col-sm-4 social-media"></div>
+			<div class="col-sm-4 masthead">
+				<div><h1>MusicCentral</h1></div>
+			</div>
+			<div class="col-sm-4 nav"></div>
+		</div>
+</div>
+
+
+<%= yield %>
+
+<!-- <div class="container-fluid">
+		<div class="row footer">
+			<div class="col-sm-4 social-media"></div>
+			<div class="col-sm-4 masthead">
+				<div><h1>MusicCentral</h1></div>
+			</div>
+			<div class="col-sm-4 nav"></div>
+		</div>
+</div> -->
+
+
+</body>
+</html>
