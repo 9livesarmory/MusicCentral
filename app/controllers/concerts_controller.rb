@@ -22,5 +22,7 @@ class ConcertsController < ApplicationController
 	def show
 		@concert=Concert.find(params[:id])
 		@comments=@concert.comments
+
+		@new_comment=Comment.new
 	end
 end

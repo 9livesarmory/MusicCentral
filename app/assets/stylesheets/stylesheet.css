@@ -34,6 +34,14 @@
 	padding:10px;
 	margin:10px;
 }
+
+.commentbox section {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+
 .upcoming h1 {
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 18px;
@@ -73,3 +81,20 @@ body {
 	background-color: #e6f7ff !important;
 }
 
+.footer {
+	line-height:40px;
+	width: 100%;
+	background-color:#f2f2f2;
+	position: absolute;
+	bottom:0;
+	border-top:1px solid #e1e8ed;
+	border-bottom:1px solid #e4e4e4;
+}
+
+.footer h6 {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 15px;
+	font-weight: 700;
+	color:#404040;
+	text-align: center;
+}

@@ -4,8 +4,11 @@ class CommentsController < ApplicationController
 	end
 
 	def create
-		@new_comment=Comment.new
+		@concert=Concert.find(params[:concert_id])
+		@new_comment=@concert.comments.new(:textbox => params[:comment][:textbox])
 		@new_comment.save
+
+		redirect_to concert_path(@concert)
 	end
 
 	def show

@@ -1,6 +1,6 @@
 
 	<div class="container-fluid">
-  			<div class="row">
+  		<div class="row">
     			<div class="col-sm-7 listing">
     				<ul>
 						<li><strong>Artist</strong>: <%= @concert.artist %>
@@ -14,13 +14,19 @@
 				</div>
 
 				<div class="col-sm-4 commentbox">
+					<section>Comments</section>
 					<ul>
 						<% @comments.each do |comment| %>
 						<li><%= comment.textbox %>
 						</li>
 						<% end %>
 					</ul>
+					<section>Comments</section>
+					<%= form_for [@concert, @new_comment] do |f| %>
+						<%= f.label :textbox %>
+						<%= f.text_field :textbox, placeholder: "What's on your mind?" %>
+						<%= f.button %>
+					<% end %>
 				</div>
-			</div>
-
-
+		</div>
+	</div>
