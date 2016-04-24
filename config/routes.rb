@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   resources :concerts do
     resources :comments
   end
+
+  post '/nameprice', to: 'concerts#nameprice'
+  get '/nameprice', to: 'concerts#shownameprice', as: :nameprice_show
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -24,5 +24,20 @@ class ConcertsController < ApplicationController
 		@comments=@concert.comments
 
 		@new_comment=Comment.new
+		@nameprice=params[:nameprice]
+	end
+
+	def nameprice
+		nameprice=params[:nameprice]
+		@concerts=Concert.all
+		d=DateTime.now
+		@filteredconcerts=Concert.where("price < ?", nameprice)
+
+		redirect_to nameprice_show_path
+
+	end
+
+	def shownameprice
+		render 'nameprice'
 	end
 end

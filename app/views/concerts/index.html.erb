@@ -40,6 +40,7 @@
 						<section><h4>Name Your Own Price Tool</h4></section>
 						<form action="/nameprice" method="POST">
  						<input type="number" name="nameprice" place holder="Name it!">
+ 						<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
  						<button type="submit">Go</button>
 						</form>	
 					</div>
